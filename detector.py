@@ -72,9 +72,9 @@ def main_cycle(path, obj, conf=0.7):
         for file in files:
             img, suff = os.path.splitext(os.path.join(dirs, file))
             if suff in SUFFIXES:
-                huy = detection(img + suff, conf, obj)
-                if huy != None:
-                    imgl.append(huy)
+                dt = detection(img + suff, conf, obj)
+                if dt != None:
+                    imgl.append(dt)
         break
     return imgl
 
